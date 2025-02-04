@@ -12,6 +12,7 @@ const PurpleSection = (props: Props) => {
   useEffect(() => {
     gsap.utils.toArray(".purple-items").forEach((item: any, index) => {
       const title = item;
+
       item.style.filter = `url(#distortionFilter-${index})`;
 
       if (title) {
@@ -86,11 +87,11 @@ const PurpleSection = (props: Props) => {
 
   return (
     <div
+      id="purple-section"
       style={{
         background:
           "linear-gradient(90deg, rgba(42,38,106,1) 0%, rgba(67,62,153,1) 50%, rgba(42,38,106,1) 100%)",
       }}
-      id="purple-section"
     >
       <div className="text-6xl  max-w-screen-md !mx-auto font-bold py-16 ">
         <span className="purple-items hover:text-white text-slate-300">
@@ -100,29 +101,29 @@ const PurpleSection = (props: Props) => {
           <svg className="distort">
             <filter id="distortionFilter-0">
               <feTurbulence
-                type="fractalNoise"
                 baseFrequency="2.01 .01"
+                height="100%"
                 numOctaves="5"
+                result="noise"
                 seed="2"
                 stitchTiles="noStitch"
+                type="fractalNoise"
+                width="100%"
                 x="0%"
                 y="0%"
-                width="100%"
-                height="100%"
-                result="noise"
-              ></feTurbulence>
+              />
               <feDisplacementMap
+                filterUnits="userSpaceOnUse"
+                height="100%"
                 in="SourceGraphic"
                 in2="noise"
                 scale="0"
-                xChannelSelector="R"
-                yChannelSelector="B"
-                x="0%"
-                y="0%"
                 width="100%"
-                height="100%"
-                filterUnits="userSpaceOnUse"
-              ></feDisplacementMap>
+                x="0%"
+                xChannelSelector="R"
+                y="0%"
+                yChannelSelector="B"
+              />
             </filter>
           </svg>
         </span>
@@ -134,29 +135,29 @@ const PurpleSection = (props: Props) => {
           <svg className="distort">
             <filter id="distortionFilter-1">
               <feTurbulence
-                type="fractalNoise"
                 baseFrequency="2.01 .01"
+                height="100%"
                 numOctaves="5"
+                result="noise"
                 seed="2"
                 stitchTiles="noStitch"
+                type="fractalNoise"
+                width="100%"
                 x="0%"
                 y="0%"
-                width="100%"
-                height="100%"
-                result="noise"
-              ></feTurbulence>
+              />
               <feDisplacementMap
+                filterUnits="userSpaceOnUse"
+                height="100%"
                 in="SourceGraphic"
                 in2="noise"
                 scale="0"
-                xChannelSelector="R"
-                yChannelSelector="B"
-                x="0%"
-                y="0%"
                 width="100%"
-                height="100%"
-                filterUnits="userSpaceOnUse"
-              ></feDisplacementMap>
+                x="0%"
+                xChannelSelector="R"
+                y="0%"
+                yChannelSelector="B"
+              />
             </filter>
           </svg>
         </span>
@@ -165,29 +166,29 @@ const PurpleSection = (props: Props) => {
           <svg className="distort">
             <filter id="distortionFilter-2">
               <feTurbulence
-                type="fractalNoise"
                 baseFrequency="2.01 .01"
+                height="100%"
                 numOctaves="5"
+                result="noise"
                 seed="2"
                 stitchTiles="noStitch"
+                type="fractalNoise"
+                width="100%"
                 x="0%"
                 y="0%"
-                width="100%"
-                height="100%"
-                result="noise"
-              ></feTurbulence>
+              />
               <feDisplacementMap
+                filterUnits="userSpaceOnUse"
+                height="100%"
                 in="SourceGraphic"
                 in2="noise"
                 scale="0"
-                xChannelSelector="R"
-                yChannelSelector="B"
-                x="0%"
-                y="0%"
                 width="100%"
-                height="100%"
-                filterUnits="userSpaceOnUse"
-              ></feDisplacementMap>
+                x="0%"
+                xChannelSelector="R"
+                y="0%"
+                yChannelSelector="B"
+              />
             </filter>
           </svg>
         </span>

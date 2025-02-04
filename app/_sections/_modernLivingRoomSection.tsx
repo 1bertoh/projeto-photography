@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import image from "@/public/tulfa/modern-living-room-with-soft-furniture-2023-11-27-05-04-10-utc.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import image from "@/public/tulfa/modern-living-room-with-soft-furniture-2023-11-27-05-04-10-utc.jpg";
 
 type Props = {};
 
@@ -48,20 +49,20 @@ const ModernLivingRoomSection = (props: Props) => {
 
   return (
     <div
+      className={`h-screen relative`}
       id="modern-living-room-section"
       style={{
         background: `url(${image.src})`,
         backgroundPositionX: "center",
         backgroundPositionY: "top",
       }}
-      className={`h-screen relative`}
     >
       <div
+        className=" absolute h-full w-full flex items-center pl-44"
         id="black-layer"
         style={{ backgroundColor: "rgb(0,0,0,0)" }}
-        className=" absolute h-full w-full flex items-center pl-44"
       >
-        <h1 id="title-lifestyle" className="text-7xl font-bold pt-[-50%]">
+        <h1 className="text-7xl font-bold pt-[-50%]" id="title-lifestyle">
           Lifestyle Scenes
         </h1>
       </div>

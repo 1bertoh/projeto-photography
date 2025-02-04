@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
+import { ArrowDownCircle, ArrowUpCircle } from "lucide-react";
+
 import image1 from "@/public/tulfa/view-of-living-room-in-minimal-style-with-yellow-s-2023-11-27-05-26-51-utc.jpg";
 import image2 from "@/public/tulfa/empty-space-on-minimal-beautiful-dining-table-in-m-2023-11-27-05-21-36-utc.jpg";
 import image3 from "@/public/tulfa/interior-design-of-neutral-living-room-2024-10-18-05-17-30-utc.jpg";
 import image4 from "@/public/tulfa/minimal-living-room-interior-design-2023-11-27-05-09-40-utc.jpg";
 import image5 from "@/public/tulfa/living-room-interior-with-dining-table-cupboard-s-2023-11-27-05-19-28-utc.jpg";
 import image6 from "@/public/tulfa/wooden-furniture-in-minimal-dining-room-interior-d-2023-11-27-05-20-43-utc.jpg";
-import { ArrowDownCircle, ArrowUpCircle } from "lucide-react";
 import GradientTitle from "@/components/gradientTitle";
 
 type Props = {};
@@ -25,12 +26,14 @@ const CarouselRooms = (props: Props) => {
   const changeImage = (direction: "up" | "down") => {
     setCurrentImage((prev) => {
       const totalImages = slide.length;
+
       if (direction === "up") {
         return prev === 1 ? totalImages : prev - 1;
       }
       if (direction === "down") {
         return prev === totalImages ? 1 : prev + 1;
       }
+
       return prev;
     });
   };
@@ -42,24 +45,24 @@ const CarouselRooms = (props: Props) => {
           {slide.map((item, index) => (
             <div
               key={item.id}
+              className={` absolute h-screen w-full transition-all duration-1000 opacity-5 translate-y-[-100%]   ${item.id <= currentImage ? "!opacity-100 !translate-y-0" : "opacity-5 translate-y-[-100%]"}`}
               style={{
                 background: `url(${item.src.src})`,
                 backgroundPositionX: "center",
                 backgroundPositionY: "center",
                 backgroundSize: "cover",
               }}
-              className={` absolute h-screen w-full transition-all duration-1000 opacity-5 translate-y-[-100%]   ${item.id <= currentImage ? "!opacity-100 !translate-y-0" : "opacity-5 translate-y-[-100%]"}`}
-            ></div>
+            />
           ))}
           <div className="flex flex-col gap-2 absolute right-5 top-1/2 -translate-y-1/2">
             <ArrowUpCircle
-              size={50}
               className="cursor-pointer"
+              size={50}
               onClick={() => changeImage("up")}
             />
             <ArrowDownCircle
-              size={50}
               className="cursor-pointer"
+              size={50}
               onClick={() => changeImage("down")}
             />
           </div>

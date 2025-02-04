@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+
 import "./index.css";
-import Introducing from "./_sections/_introducing";
-import PurpleSection from "./_sections/_purpleSection";
-import SiloSection from "./_sections/_siloSection";
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+
+import Introducing from "./_sections/_introducing";
+import PurpleSection from "./_sections/_purpleSection";
+import SiloSection from "./_sections/_siloSection";
 import SectionSizes from "./_sections/_sectionSizes";
 import SofaSection from "./_sections/_sofaSection";
 import SecondSofaSection from "./_sections/_secondSofaSection";

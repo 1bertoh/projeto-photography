@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
+import { Divider } from "@nextui-org/divider";
+
 import blueSofa from "@/public/tulfa/blue-sofa-on-white-background-2023-11-27-05-35-36-utc-Photoroom.png";
 import greySofa from "@/public/tulfa/grey-sofa-on-white-background-2024-10-23-17-40-37-utc-Photoroom.png";
 import violetSofa from "@/public/tulfa/violet-sofa-2023-11-27-05-16-21-utc-Photoroom.png";
 import menuBlueSofa from "@/public/tulfa/menu-blue-sofa.png";
 import menuGreySofa from "@/public/tulfa/menu-grey-sofa.png";
 import menuVioletSofa from "@/public/tulfa/menu-violet-sofa.png";
-import Image from "next/image";
-import { Divider } from "@nextui-org/divider";
 
 type Props = {};
 
@@ -30,10 +31,10 @@ const SecondSofaSection = (props: Props) => {
           {sofas.map((sofa) => (
             <Image
               key={sofa.id}
-              src={sofa.src}
               alt={sofa.alt}
-              width={456}
               className={` absolute transition-all duration-1000 ${sofa.id <= currentImage ? "opacity-100" : "opacity-0"} ${isMenuOpen ? "translate-x-2" : "translate-x-0"}`}
+              src={sofa.src}
+              width={456}
             />
           ))}
         </div>
@@ -53,7 +54,7 @@ const SecondSofaSection = (props: Props) => {
                 backgroundPositionX: "center",
                 backgroundPositionY: "-10px",
               }}
-            ></div>
+            />
           ))}
         </div>
       </div>
@@ -85,6 +86,7 @@ const Menu = (props: TMenu) => {
       alt: "violet sofe",
     },
   ];
+
   return (
     <div
       className={`bg-white transition-all ease-out duration-1000 h-56 z-10 ${isOpen ? "translate-y-0" : "-translate-y-56"} w-1/2 rounded-bl-3xl absolute top-0 right-0 text-black overflow-hidden`}
@@ -93,7 +95,7 @@ const Menu = (props: TMenu) => {
         <div key={item.name} onClick={() => onChange(index + 1)}>
           <div className="flex justify-between items-center pl-3 cursor-pointer">
             <span>{item.name}</span>
-            <Image src={item.image} alt={item.alt} />
+            <Image alt={item.alt} src={item.image} />
           </div>
           <Divider />
         </div>

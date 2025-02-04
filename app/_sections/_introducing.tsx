@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import React, { useEffect } from "react";
+
 import yellowSofa from "@/public/tulfa/modern-scandinavian-yellow-sofa-isolated-over-whit-2023-11-27-05-20-00-utc.png";
 import img from "@/public/tulfa/introducing.svg";
 
@@ -60,18 +61,18 @@ const Introducing = (props: Props) => {
   }, []);
 
   return (
-    <div id="wit" className="relative overflow-hidden overflow-x-hidden">
-      <div id="batata" className="inline-block relative w-full h-screen">
-        <video className="" autoPlay={true} muted loop>
+    <div className="relative overflow-hidden overflow-x-hidden" id="wit">
+      <div className="inline-block relative w-full h-screen" id="batata">
+        <video loop muted autoPlay={true} className="">
           <source src={path} type="video/mp4" />
-          <track src={path} srcLang="en" label="English" />
+          <track label="English" src={path} srcLang="en" />
           Your browser does not support the video tag.
         </video>
         <Image
-          id="introducing"
-          src={img}
           alt="introducing"
           className="video w-full z-20 mix-blend-lighten absolute top-[50%] left-[50%]"
+          id="introducing"
+          src={img}
           style={{
             transform: "translate(-50%, -50%)",
           }}
@@ -80,15 +81,15 @@ const Introducing = (props: Props) => {
       </div>
       <div className="relative z-20 bg-white">
         <h1
-          id="first"
           className="text-slate-900 text-8xl font-bold text-center text-color-trans mb-14"
+          id="first"
         >
           Virtual Product Photography
         </h1>
         <Image
+          alt="modern scandinavian yellow sofa isolated over whit"
           id="scandinavian-yellow-sofa"
           src={yellowSofa}
-          alt="modern scandinavian yellow sofa isolated over whit"
         />
       </div>
     </div>

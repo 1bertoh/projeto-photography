@@ -1,7 +1,8 @@
-import GradientTitle from "@/components/gradientTitle";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
+
+import GradientTitle from "@/components/gradientTitle";
 
 type Props = {};
 
@@ -17,6 +18,7 @@ const CloseUpShotsSection = (props: Props) => {
         end: "bottom +=15%",
       },
     });
+
     tl.fromTo(
       "#gradient-title2",
       {
@@ -28,6 +30,7 @@ const CloseUpShotsSection = (props: Props) => {
       },
     );
   }, []);
+
   return (
     <div className="py-36 bg-white">
       <GradientTitle id="closeUpSectionTitle" text="Close Up Shots" />

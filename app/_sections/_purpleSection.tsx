@@ -46,14 +46,15 @@ const PurpleSection = (props: Props) => {
       // }
     });
   }, []);
+
   return (
     <div
+      className=""
       style={{
         background:
           "linear-gradient(90deg, rgba(42,38,106,1) 0%, rgba(67,62,153,1) 50%, rgba(42,38,106,1) 100%)",
         scrollSnapAlign: "start",
       }}
-      className=""
     >
       <div className="text-7xl  max-w-screen-md mx-auto font-bold py-16 text-slate-300 ">
         <span className="purple-items">

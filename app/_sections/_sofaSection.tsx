@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import yellowSofa from "@/public/tulfa/yellow-sofa-with-pillows-isolated-on-white-backgro-2023-11-27-05-21-07-utc-Photoroom.png";
-import orangeSofa from "@/public/tulfa/orange-sofa-with-pillows-isolated-on-white-backgro-2023-11-27-05-21-12-utc-Photoroom.png";
-
-import violetSofa from "@/public/tulfa/violet-sofa-with-pillows-isolated-on-white-backgro-2023-11-27-05-01-16-utc-Photoroom.png";
-import RoundedShadowButton from "@/components/roundedButton";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import yellowSofa from "@/public/tulfa/yellow-sofa-with-pillows-isolated-on-white-backgro-2023-11-27-05-21-07-utc-Photoroom.png";
+import orangeSofa from "@/public/tulfa/orange-sofa-with-pillows-isolated-on-white-backgro-2023-11-27-05-21-12-utc-Photoroom.png";
+import violetSofa from "@/public/tulfa/violet-sofa-with-pillows-isolated-on-white-backgro-2023-11-27-05-01-16-utc-Photoroom.png";
+import RoundedShadowButton from "@/components/roundedButton";
 
 type Props = {};
 
@@ -32,8 +32,8 @@ const SofaSection = (props: Props) => {
 
   return (
     <div
-      id="sofa-section-container"
       className="h-screen"
+      id="sofa-section-container"
       style={{ scrollSnapAlign: "start" }}
     >
       <div className="flex h-full items-center" id="jonas">
@@ -41,27 +41,27 @@ const SofaSection = (props: Props) => {
           {sofas.map((sofa) => (
             <Image
               key={sofa.id}
-              src={sofa.src}
               alt={sofa.alt}
               className={`transition-all duration-1000 absolute ${
                 sofa.id <= currentImage ? "opacity-100" : "opacity-0"
               }`}
+              src={sofa.src}
             />
           ))}
           <div className="flex gap-1 absolute bottom-9 left-[50%] translate-x-[-50%]">
             <RoundedShadowButton
-              callback={() => setCurrentImage(1)}
               button_color="rgb(189,108,21, 0.5)"
+              callback={() => setCurrentImage(1)}
               shadow_color="rgb(189,108,21, 1)"
             />
             <RoundedShadowButton
-              callback={() => setCurrentImage(2)}
               button_color="rgb(67,62,153, 0.5)"
+              callback={() => setCurrentImage(2)}
               shadow_color="rgb(67,62,153, 1)"
             />
             <RoundedShadowButton
-              callback={() => setCurrentImage(3)}
               button_color="rgb(180,172,55, 0.5)"
+              callback={() => setCurrentImage(3)}
               shadow_color="rgb(180,172,55, 1)"
             />
           </div>
@@ -72,9 +72,9 @@ const SofaSection = (props: Props) => {
           {sofas.map((sofa) => (
             <Image
               key={sofa.id}
-              src={sofa.src}
               alt={sofa.alt}
               className={`left-[50%] scale-[1.6] transition-all duration-1000 absolute ${sofa.id <= currentImage ? "opacity-100" : "opacity-0"}`}
+              src={sofa.src}
             />
           ))}
         </div>
