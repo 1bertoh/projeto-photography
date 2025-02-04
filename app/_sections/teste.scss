@@ -1,0 +1,48 @@
+#purple-section{
+	@function grid($grid-size) {
+		@return calc(100vw / 24 * #{$grid-size});
+	}
+	
+	@font-face {
+		font-family: "Anybody";
+		src: url("https://assets.codepen.io/1492907/Anybody.woff2") format("woff2");
+	}
+	
+	* {
+		font-family: "Anybody";
+		margin: 0;
+	}
+	
+	
+	// .purple-items {
+	// 	/* padding: 4rem; */
+	// 	// font-size: grid(0.9);
+	// 	font-variation-settings: "wght" 700;
+	// }
+	// @media (max-width: 800px) {
+	// 	.purple-items {
+	// 		font-size: 8rem;
+	// 	}
+	// }
+	
+	svg {
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: -9999px;
+		pointer-events: none;
+	}
+	
+	a {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 2rem;
+		color: #0e0e0e;
+		text-decoration: none;
+	}
+	a:last-of-type {
+		right: 0;
+		left: unset;
+	}
+}
