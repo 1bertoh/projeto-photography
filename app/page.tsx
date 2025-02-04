@@ -85,10 +85,7 @@ const Page = () => {
         <CloseUpShotsSection />
       </section>
       <section>
-        <ViewOfAMordernLauge
-          lenis={lenisInstance}
-          setIsModalOpen={setIsModalOpen}
-        />
+        <ViewOfAMordernLauge/>
       </section>
       <section>
         <CarouselCarpenters />
