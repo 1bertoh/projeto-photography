@@ -5495,7 +5495,7 @@ const BreadBottomSVG = (props: any) => (
           offset={1}
         />
       </radialGradient>
-      <clipPath >
+      <clipPath>
         <path
           d="M 875 1079.113281 L 879.761719 1079.113281 L 879.761719 1080 L 875 1080 Z M 875 1079.113281 "
           clipRule="nonzero"

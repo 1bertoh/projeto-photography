@@ -1,69 +1,70 @@
-.text-color-trans{
-    animation: 5s text-color-trans ease-in infinite alternate;
+.text-color-trans {
+  animation: 5s text-color-trans ease-in infinite alternate;
+  color: #390099;
+}
+
+@keyframes text-color-trans {
+  0% {
     color: #390099;
+  }
+  33% {
+    color: #9e0059;
+  }
+  66% {
+    color: #ff0054;
+  }
 }
 
-@keyframes text-color-trans{
-    0%{
-        color: #390099;
-    }
-    33%{
-        color: #9e0059;
-    }
-    66%{
-        color: #ff0054;
-    }
+.focused {
+  transition: 0.2 color;
+  color: white !important;
 }
 
-.focused{
-    transition: 0.2 color;
-    color: white !important;
+.gradient-title {
+  font-size: 3rem;
+  font-weight: bold !important;
+  background: -webkit-linear-gradient(left, #433e99, #ef4b32);
+  background: linear-gradient(to right, #433e99, #ef4b32);
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
-.gradient-title{ 
-    font-size: 3rem ;
-    font-weight: bold !important;
-    background: -webkit-linear-gradient(left, #433e99, #ef4b32) ;
-    background: linear-gradient(to right, #433e99, #ef4b32) ;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-}
-
-.modal-gradient-title-1{ 
-    font-size: 1.5rem;
-    background: -webkit-linear-gradient(left, #2A266A, #524BD0);
-    background: linear-gradient(to right, #2A266A, #524BD0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.modal-gradient-title-1 {
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(left, #2a266a, #524bd0);
+  background: linear-gradient(to right, #2a266a, #524bd0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes slideUpAndFade {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-96px); /* Equivalente a -translate-y-24 no Tailwind */
-      opacity: 0;
-    }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .slide-up-and-fade {
-    animation: slideUpAndFade 0.5s ease-out alternate both;
+  100% {
+    transform: translateY(
+      -96px
+    ); /* Equivalente a -translate-y-24 no Tailwind */
+    opacity: 0;
   }
+}
+
+.slide-up-and-fade {
+  animation: slideUpAndFade 0.5s ease-out alternate both;
+}
 
 @keyframes slideLeftAndFade {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100); /* Equivalente a -translate-y-24 no Tailwind */
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  .slide-left-and-fade {
-    animation: slideLeftAndFade 1s ease-out alternate both;
+  100% {
+    transform: translateX(-100); /* Equivalente a -translate-y-24 no Tailwind */
   }
-  
+}
+
+.slide-left-and-fade {
+  animation: slideLeftAndFade 1s ease-out alternate both;
+}
