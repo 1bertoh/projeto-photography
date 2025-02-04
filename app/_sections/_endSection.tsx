@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const EndSection = (props: Props) => {
+const EndSection = () => {
   return (
     <div>
       <div

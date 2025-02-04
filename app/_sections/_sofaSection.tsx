@@ -8,9 +8,7 @@ import orangeSofa from "@/public/tulfa/orange-sofa-with-pillows-isolated-on-whit
 import violetSofa from "@/public/tulfa/violet-sofa-with-pillows-isolated-on-white-backgro-2023-11-27-05-01-16-utc-Photoroom.png";
 import RoundedShadowButton from "@/components/roundedButton";
 
-type Props = {};
-
-const SofaSection = (props: Props) => {
+const SofaSection = () => {
   const [currentImage, setCurrentImage] = useState(1);
   const sofas = [
     { src: orangeSofa, alt: "orange sofa", id: 1 },

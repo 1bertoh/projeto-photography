@@ -1,11 +1,11 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 
 import "./index.css";
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-
 import Introducing from "./_sections/_introducing";
 import PurpleSection from "./_sections/_purpleSection";
 import SiloSection from "./_sections/_siloSection";
@@ -19,9 +19,7 @@ import CarouselCarpenters from "./_sections/_carouselInstallation";
 import CarouselRooms from "./_sections/_carouselRooms";
 import EndSection from "./_sections/_endSection";
 
-type Props = {};
-
-const Page = (props: Props) => {
+const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const lenisInstance = useRef<Lenis | null>(null);
   // useEffect(() => {
@@ -45,7 +43,7 @@ const Page = (props: Props) => {
 
     const sections = document.querySelectorAll("section");
 
-    sections.forEach((section, index) => {
+    sections.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top top", // Inicia no topo da seção

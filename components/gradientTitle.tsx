@@ -23,8 +23,6 @@ type Props = {
 
 const GradientTitle = (props: Props) => {
   const { text, fontSize, id } = props;
-  const d = new Date();
-  const time = d.getTime();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -37,6 +35,7 @@ const GradientTitle = (props: Props) => {
         end: "bottom +=15%",
       },
     });
+
     tl.fromTo(
       `#${id}`,
       {
@@ -48,10 +47,11 @@ const GradientTitle = (props: Props) => {
       },
     );
   }, []);
+
   return (
     <h2
-      id={id}
       className={`gradient-title w-fit mx-auto !${fontSize || ""} text-center font-bold`}
+      id={id}
     >
       {text}
     </h2>

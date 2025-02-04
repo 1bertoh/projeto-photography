@@ -10,9 +10,7 @@ import image5 from "@/public/tulfa/living-room-interior-with-dining-table-cupboa
 import image6 from "@/public/tulfa/wooden-furniture-in-minimal-dining-room-interior-d-2023-11-27-05-20-43-utc.jpg";
 import GradientTitle from "@/components/gradientTitle";
 
-type Props = {};
-
-const CarouselRooms = (props: Props) => {
+const CarouselRooms = () => {
   const [currentImage, setCurrentImage] = useState(1);
   const slide = [
     { src: image1, alt: "blue sofa", id: 1 },
@@ -42,7 +40,7 @@ const CarouselRooms = (props: Props) => {
     <>
       <div className="relative overflow-hidden">
         <div className="h-screen bg-white">
-          {slide.map((item, index) => (
+          {slide.map((item) => (
             <div
               key={item.id}
               className={` absolute h-screen w-full transition-all duration-1000 opacity-5 translate-y-[-100%]   ${item.id <= currentImage ? "!opacity-100 !translate-y-0" : "opacity-5 translate-y-[-100%]"}`}

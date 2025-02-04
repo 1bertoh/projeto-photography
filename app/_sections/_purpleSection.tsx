@@ -3,9 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 
-type Props = {};
-
-const PurpleSection = (props: Props) => {
+const PurpleSection = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {

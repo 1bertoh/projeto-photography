@@ -1,6 +1,4 @@
 import { Modal as NUIModal, ModalContent } from "@nextui-org/modal";
-import Lenis from "lenis";
-import { useEffect } from "react";
 
 type TModal = {
   isOpen: boolean;
@@ -10,18 +8,16 @@ type TModal = {
 };
 
 export default function Modal(props: TModal) {
-  const { isOpen, onOpen, onOpenChange, children } = props;
+  const { isOpen, onOpenChange, children } = props;
 
   return (
     <>
       <NUIModal
+        hideCloseButton
+        backdrop="transparent"
+        className="bg-[#F9FAFF] shadow-2xl"
         id="super-modal"
-        shouldBlockScroll={true}
-        scrollBehavior="normal"
-        placement="top"
         isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        size="4xl"
         motionProps={{
           variants: {
             enter: {
@@ -46,11 +42,13 @@ export default function Modal(props: TModal) {
             },
           },
         }}
-        className="bg-[#F9FAFF] shadow-2xl"
-        backdrop="transparent"
-        hideCloseButton
+        placement="top"
+        scrollBehavior="normal"
+        shouldBlockScroll={true}
+        size="4xl"
+        onOpenChange={onOpenChange}
       >
-        <ModalContent>{(onClose) => <>{children}</>}</ModalContent>
+        <ModalContent>{() => <>{children}</>}</ModalContent>
       </NUIModal>
     </>
   );

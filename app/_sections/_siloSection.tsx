@@ -8,21 +8,17 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import gsap from "gsap";
-
 import img from "@/public/tulfa/6367-beige-basket-isolated-on-a-transparent-backg-2023-11-27-04-51-12-utc.jpg";
 import transImg from "@/public/tulfa/6367-beige-basket-isolated-on-a-transparent-backg-2023-11-27-04-51-12-utc.png";
 import Modal from "@/components/modal";
 import silo_v_1 from "@/public/tulfa/silo-v-1.jpg";
 import silo_v_2 from "@/public/tulfa/silo-v-2.jpg";
 import silo_v_3 from "@/public/tulfa/silo-v-3.jpg";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GradientTitle from "@/components/gradientTitle";
 
-type Props = {};
-
-const SiloSection = (props: Props) => {
+const SiloSection = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   gsap.registerPlugin(ScrollTrigger);
@@ -88,6 +84,12 @@ const SiloSection = (props: Props) => {
           <div
             className="p-1 text-white hover:scale-105 bg-[#2A266A] rounded-full cursor-pointer absolute right-7 top-5 transition-all"
             onClick={onOpenChange}
+            role="button" // Adiciona um papel semântico
+            tabIndex={0} // Torna o elemento focável
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+              }
+            }}
           >
             <X size={19} />
           </div>

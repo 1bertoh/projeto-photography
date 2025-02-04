@@ -4,9 +4,7 @@ import React, { useEffect } from "react";
 
 import GradientTitle from "@/components/gradientTitle";
 
-type Props = {};
-
-const CloseUpShotsSection = (props: Props) => {
+const CloseUpShotsSection = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 

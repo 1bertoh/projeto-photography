@@ -18,13 +18,8 @@ import image6 from "@/public/tulfa/screw-for-furniture-assembly-close-up-2023-11
 import image7 from "@/public/tulfa/stylish-chest-of-drawers-close-up-furniture-for-2024-01-18-18-28-52-utc.jpg";
 import GradientTitle from "@/components/gradientTitle";
 
-type Props = {
-  setIsModalOpen: Function;
-  lenis: React.MutableRefObject<Lenis | null>;
-};
 
-const ViewOfAMordernLauge = (props: Props) => {
-  const { setIsModalOpen, lenis } = props;
+const ViewOfAMordernLauge = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
@@ -45,6 +40,12 @@ const ViewOfAMordernLauge = (props: Props) => {
             <div
               className="p-1 text-white hover:scale-105 bg-[rgb(42,38,106,0.4)] rounded-full cursor-pointer absolute right-7 top-5 transition-all"
               onClick={onOpenChange}
+              role="button" // Adiciona um papel semântico
+              tabIndex={0} // Torna o elemento focável
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                }
+              }}
             >
               <X size={19} />
             </div>
@@ -112,6 +113,12 @@ const Button = (props: TButton) => {
       className={`bg-zinc-700  rounded-full justify-center  flex gap-2 w-0 py-0 px-0 items-center absolute bottom-6 left-[50%] translate-x-[-50%] cursor-pointer shadow-md`}
       id="button-body"
       onClick={onOpen}
+      role="button" // Adiciona um papel semântico
+      tabIndex={0} // Torna o elemento focável
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+        }
+      }}
     >
       <span className="text-sm text-nowrap overflow-hidden">
         Take a Closer Look

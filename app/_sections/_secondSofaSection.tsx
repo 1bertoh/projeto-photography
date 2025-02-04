@@ -11,9 +11,7 @@ import menuBlueSofa from "@/public/tulfa/menu-blue-sofa.png";
 import menuGreySofa from "@/public/tulfa/menu-grey-sofa.png";
 import menuVioletSofa from "@/public/tulfa/menu-violet-sofa.png";
 
-type Props = {};
-
-const SecondSofaSection = (props: Props) => {
+const SecondSofaSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(1);
   const sofas = [
@@ -92,7 +90,16 @@ const Menu = (props: TMenu) => {
       className={`bg-white transition-all ease-out duration-1000 h-56 z-10 ${isOpen ? "translate-y-0" : "-translate-y-56"} w-1/2 rounded-bl-3xl absolute top-0 right-0 text-black overflow-hidden`}
     >
       {menuItems.map((item, index) => (
-        <div key={item.name} onClick={() => onChange(index + 1)}>
+        <div
+          key={item.name}
+          onClick={() => onChange(index + 1)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+            }
+          }}
+          role="button" // Adiciona um papel semântico
+          tabIndex={0} // Torna o elemento focável
+        >
           <div className="flex justify-between items-center pl-3 cursor-pointer">
             <span>{item.name}</span>
             <Image alt={item.alt} src={item.image} />

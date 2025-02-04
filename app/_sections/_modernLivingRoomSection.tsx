@@ -4,9 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import image from "@/public/tulfa/modern-living-room-with-soft-furniture-2023-11-27-05-04-10-utc.jpg";
 
-type Props = {};
-
-const ModernLivingRoomSection = (props: Props) => {
+const ModernLivingRoomSection = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 

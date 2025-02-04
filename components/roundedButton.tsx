@@ -8,16 +8,26 @@ type Props = {
 
 const RoundedShadowButton = (props: Props) => {
   const { button_color, shadow_color, callback } = props;
+
   return (
-    <div onClick={callback} className="h-8 w-8 rounded-full cursor-pointer">
+    <div
+      className="h-8 w-8 rounded-full cursor-pointer"
+      onClick={callback}
+      role="button" // Adiciona um papel semântico
+      tabIndex={0} // Torna o elemento focável
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+        }
+      }}
+    >
       <div
-        style={{ backgroundColor: button_color }}
         className={`w-full h-1/2 rounded-t-full`}
-      ></div>
+        style={{ backgroundColor: button_color }}
+      />
       <div
-        style={{ backgroundColor: shadow_color }}
         className={`w-full h-1/2 rounded-b-full`}
-      ></div>
+        style={{ backgroundColor: shadow_color }}
+      />
     </div>
   );
 };

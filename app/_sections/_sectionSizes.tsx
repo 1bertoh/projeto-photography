@@ -6,9 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import image from "@/public/tulfa/6412-brown-storage-cabinet-isolated-on-a-transpar-2023-11-27-05-08-49-utc-Photoroom.png";
 
-type Props = {};
-
-const SectionSizes = (props: Props) => {
+const SectionSizes = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -55,7 +53,7 @@ const SectionSizes = (props: Props) => {
           },
         );
 
-      const tl2 = gsap.timeline({
+      gsap.timeline({
         scrollTrigger: {
           trigger: "#sofa-section",
           pin: "#sofa-section",

@@ -7,9 +7,7 @@ import React, { useEffect } from "react";
 import yellowSofa from "@/public/tulfa/modern-scandinavian-yellow-sofa-isolated-over-whit-2023-11-27-05-20-00-utc.png";
 import img from "@/public/tulfa/introducing.svg";
 
-type Props = {};
-
-const Introducing = (props: Props) => {
+const Introducing = () => {
   const path =
     "/tulfa/aerial-video-of-the-sunrise-in-the-dolomites-mount-2023-11-27-05-26-37-utc.mp4";
 
