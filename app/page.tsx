@@ -48,7 +48,7 @@ const Page = () => {
         trigger: section,
         start: "top top", // Inicia no topo da seção
         end: "bottom top", // Termina no topo da próxima seção
-        markers: true,
+        // markers: true,
         snap: {
           snapTo: [0.25, 0.5, 0.75, 1], // Encaixa na seção mais próxima
           duration: { min: 0.2, max: 0.6 }, // Duração da animação
